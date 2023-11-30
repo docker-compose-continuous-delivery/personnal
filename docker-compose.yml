@@ -26,7 +26,7 @@ services:
       - traefik
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.beta-ozeliurs.rule=Host(`${BASE_DOMAIN:-ozeliurs.com}` || Host(`www.${BASE_DOMAIN:-ozeliurs.com}`)"
+      - "traefik.http.routers.beta-ozeliurs.rule=Host(`${BASE_DOMAIN:-ozeliurs.com}`) || Host(`www.${BASE_DOMAIN:-ozeliurs.com}`)"
       - "traefik.http.routers.beta-ozeliurs.entrypoints=websecure"
       - "traefik.http.routers.beta-ozeliurs.tls=true"
       - "traefik.http.routers.beta-ozeliurs.tls.certresolver=cloudflare"
