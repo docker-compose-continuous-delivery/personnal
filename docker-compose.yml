@@ -9,6 +9,7 @@ services:
       - .flomepage.env
     volumes:
       - ./flomepage:/app/persistent
+      - ./i2l:/app/IP2LOCATION
     networks:
       - traefik
     labels:
