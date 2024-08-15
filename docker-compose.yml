@@ -5,6 +5,8 @@ services:
     image: ozeliurs/flomepage:latest
     restart: unless-stopped
     container_name: flomepage
+    env_file:
+      - .flomepage.env
     volumes:
       - ./flomepage:/app/persistent
     networks:
